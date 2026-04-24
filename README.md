@@ -9,11 +9,13 @@ The repeated treatment effects can be incorporated into the structural submodel 
 + We can model treatment as impacting the dynamics of the latent process through a time-varying drift term on the derivative scale (called the **drift** approach).
 
 
+
 An overview of this repository is here:
+
 1. Simulated data for illustrative purposes are available in the [sim_data](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data) directory.
-2. To fit the model, use [fit_model/fit_ouf_rec.R](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data/fit_model/fit_ouf_rec.R).
-3. After fitting the model, models can be compared using information criteria, with code provided in [check_fit/calc_dic_waic.R](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data/check_fit/calc_dic_waic.R).
-4. Goodness-of-fit plots for assessing the survival submodel calibration can be generated using code in [check_fit/ppc_survival.R](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data/check_fit/ppc_survival.R).
+2. To fit the model, use [fit_model/fit_ouf_rec.R](https://github.com/madelineabbott/OUF_JM_TX/blob/main/fit_model/fit_ouf_rec.R).
+3. After fitting the model, models can be compared using information criteria, with code provided in [check_fit/calc_dic_waic.R](https://github.com/madelineabbott/OUF_JM_TX/blob/main/sim_data/check_fit/calc_dic_waic.R).
+4. Goodness-of-fit plots for assessing the survival submodel calibration can be generated using code in [check_fit/ppc_survival.R](https://github.com/madelineabbott/OUF_JM_TX/blob/main/sim_data/check_fit/ppc_survival.R).
 
 
 For questions, please contact mabbott@sdac.harvard.edu.
