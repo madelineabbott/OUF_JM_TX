@@ -10,6 +10,6 @@ The repeated treatment effects can be incorporated into the structural submodel 
 
 
 
-The main file ([main.R])(https://github.com/madelineabbott/OUF_JM_TX/blob/main/main.R) call programs in the proper order to set up the data for model fitting, to fit the model, to compare model fits using information criteria, and to assess survival submodel calibration with goodness-of-fit plots.  Simulated data for illustrative purposes are available in the [sim_data](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data) directory.
+The main file [(main.R)](https://github.com/madelineabbott/OUF_JM_TX/blob/main/main.R) call programs in the proper order to set up the data for model fitting, to fit the model, to compare model fits using information criteria, and to assess survival submodel calibration with goodness-of-fit plots.  Simulated data for illustrative purposes are available in the [sim_data](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data) directory.
 
 For questions, please contact mabbott@sdac.harvard.edu.
