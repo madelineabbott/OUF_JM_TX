@@ -10,7 +10,7 @@ Approach to calculating information criteria:
 + DIC
 + WAIC
 
-This repository contains simulated data for illustrative purposes.  Simulated data can be found...
+This repository contains simulated data for illustrative purposes in the [sim_dat](https://github.com/madelineabbott/OUF_JM_TX/sim_dat) directory.
 
 To fit the model, use either XXX (additive tx effect) or YYY (derivative tx effect).
 
