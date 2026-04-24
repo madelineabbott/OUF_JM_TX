@@ -10,12 +10,6 @@ The repeated treatment effects can be incorporated into the structural submodel 
 
 
 
-An overview of this repository is here:
-
-1. Simulated data for illustrative purposes are available in the [sim_data](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data) directory.
-2. To fit the model, use [fit_model/fit_ouf_rec.R](https://github.com/madelineabbott/OUF_JM_TX/blob/main/fit_model/fit_ouf_rec.R).
-3. After fitting the model, models can be compared using information criteria, with code provided in [check_fit/calc_dic_waic.R](https://github.com/madelineabbott/OUF_JM_TX/blob/main/sim_data/check_fit/calc_dic_waic.R).
-4. Goodness-of-fit plots for assessing the survival submodel calibration can be generated using code in [check_fit/ppc_survival.R](https://github.com/madelineabbott/OUF_JM_TX/blob/main/sim_data/check_fit/ppc_survival.R).
-
+The main file [main.R](https://github.com/madelineabbott/OUF_JM_TX/blob/main/main.R) call programs in the proper order to set up the data for model fitting, to fit the model, to compare model fits using information criteria, and to assess survival submodel calibration with goodness-of-fit plots.  Simulated data for illustrative purposes are available in the [sim_data](https://github.com/madelineabbott/OUF_JM_TX/tree/main/sim_data) directory.
 
 For questions, please contact mabbott@sdac.harvard.edu.
