@@ -254,6 +254,10 @@ cumu_tx_times <- cumsum(table(repeated_eta_id_vec))
 # if hazard depends on some function of time since most recent event (e.g., logit),
 # then we need to precalculate this value
 g_deltat_prev_event <- c()
+# later, when predicting events, we want to only condition on events that occurred
+#  before t, and not include any observed events that occurred between time
+#  t and tprime, so we now also want to save the time of the previous event
+prev_event_time <- c() 
 # hazard depends also on time since previous event
 for (cur_id in 1:N){
   all_times_template_i <- all_times_template %>% filter(id == cur_id)
@@ -269,6 +273,7 @@ for (cur_id in 1:N){
     if (no_prior_events == FALSE){
       most_recent_event_time <- prior_event_time$event_time
     }
+    prev_event_time <- c(prev_event_time, most_recent_event_time)
     time_since_prev_event <- cur_time - most_recent_event_time
     if (setting == 1){
       g_time_since_prev_event <- 1 / (1 + exp(4*(time_since_prev_event - 2)))
@@ -279,6 +284,7 @@ for (cur_id in 1:N){
   }
 }
 all_times_template$g_deltat_prev_event = g_deltat_prev_event
+all_times_template$prev_event_time <- prev_event_time
 
 
 
@@ -342,7 +348,11 @@ dat = list(
   # hazard depends on some function of time since prev. event
   g_deltat_prev_event = all_times_template$g_deltat_prev_event,
   # times of grid points for calc of baseline haz (if time-varying)
-  cur_time = all_times_template$time + 0.0001)
+  cur_time = all_times_template$time + 0.0001,
+  
+  # previous event time (for posterior event predictions later)
+  prev_event_time = all_times_template$prev_event_time
+  )
 
 # initialize parameters (alternatively, could use two-stage approach)
 init_params <- list(
